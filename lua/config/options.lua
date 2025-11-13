@@ -15,4 +15,4 @@ vim.g.lazyvim_python_lsp = "basedpyright"
 vim.g.lazyvim_python_ruff = "ruff"
 
 -- Disable inlay hints globally (no type annotations)
-vim.lsp.inlay_hint.enable(false)
+-- Note: This is handled in the LSP on_attach callback in python.lua

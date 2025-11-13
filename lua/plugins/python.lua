@@ -98,7 +98,13 @@ return {
           },
           -- Disable inlay hints from basedpyright
           on_attach = function(client, bufnr)
+            -- Disable inlay hint provider capability
             client.server_capabilities.inlayHintProvider = false
+
+            -- Also explicitly disable inlay hints for this buffer
+            if vim.lsp.inlay_hint then
+              vim.lsp.inlay_hint.enable(false, { bufnr = bufnr })
+            end
           end,
         },
         ruff = {
