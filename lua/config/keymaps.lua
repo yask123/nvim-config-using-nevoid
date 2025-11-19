@@ -68,3 +68,8 @@ vim.keymap.set("n", "<leader>bo", function()
     end
   end
 end, { noremap = true, silent = true, desc = "Close all other buffers" })
+
+-- Select all text (similar to Cmd+A)
+-- Note: Cmd+A is usually intercepted by the terminal (Warp)
+-- We map Ctrl+A instead, which works reliably in terminals
+vim.keymap.set({ "n", "i" }, "<C-a>", "<Esc>ggVG", { desc = "Select All" })

@@ -36,10 +36,10 @@ return {
   },
   
   -- TypeScript support
-  { import = "lazyvim.plugins.extras.lang.typescript" },
+  -- moved to config/lazy.lua
 
   -- Python support with basedpyright LSP
-  { import = "lazyvim.plugins.extras.lang.python" },
+  -- moved to config/lazy.lua
 
   -- Auto-save like VSCode/Zed
   {
